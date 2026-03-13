@@ -1,69 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Wedding Collection</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">RoyalGroom</div>
+
 <nav>
+
 <a href="index.html">Home</a>
-<a href="cart.html">Cart</a>
+<a href="products.html">Collection</a>
+
+<a href="cart.html" class="cart-icon">
+🛒 Cart <span id="cartCount">0</span>
+</a>
+
 <a href="checkout.html">Checkout</a>
+
+<span id="userSection">
+<a href="login.html">Login</a>
+</span>
+
 </nav>
+
 </header>
 
+
 <div class="container">
+
 <h2>Men's Wedding Collection</h2>
 
 <div class="grid">
 
-<div class="card">
-<img src="E:\mens-ecommerce\images\pic1.jpg">
+<!-- PRODUCT 1 -->
+<div class="card" onclick="viewProduct('Royal Cream Sherwani',4999,'images/pic1.jpg')">
+
+<img src="images/pic1.jpg">
+
 <h3>Royal Cream Sherwani</h3>
+
 <p class="price">₹4,999</p>
-<button onclick="addToCart('Royal Cream Sherwani',4999)">
+
+<button onclick="addToCart('Royal Cream Sherwani',4999,'images/pic1.jpg'); event.stopPropagation();">
 Add To Cart
 </button>
+
 </div>
 
-<div class="card">
-<img src="E:\mens-ecommerce\images\pic-2.jpg">
-<h3>Designer Groom Suit</h3>
-<p class="price">₹6,999</p>
-<button onclick="addToCart('Designer Groom Suit',6999)">
-Add To Cart
-</button>
-</div>
 
-<div class="card">
-<img src="E:\mens-ecommerce\images\pic-3.jpg">
-<h3>Silk Kurta Wedding Set</h3>
-<p class="price">₹2,499</p>
-<button onclick="addToCart('Silk Kurta Wedding Set',2499)">
-Add To Cart
-</button>
-</div>
+<!-- PRODUCT 2 -->
+<div class="card" onclick="viewProduct('Golden Wedding Sherwani',5499,'images/pic-2.jpg')">
 
-<div class="card">
-<img src="E:\mens-ecommerce\images\pic-4.jpg">
-<h3>Indo-Western Groom Outfit</h3>
+<img src="images/pic-2.jpg">
+
+<h3>Golden Wedding Sherwani</h3>
+
 <p class="price">₹5,499</p>
-<button onclick="addToCart('Indo-Western Groom Outfit',5499)">
+
+<button onclick="addToCart('Golden Wedding Sherwani',5499,'images/pic-2.jpg'); event.stopPropagation();">
 Add To Cart
 </button>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+<div class="card" onclick="viewProduct('Maroon Maharaja Sherwani',6299,'images/pic-3.jpg')">
+
+<img src="images/pic-3.jpg">
+
+<h3>Maroon Maharaja Sherwani</h3>
+
+<p class="price">₹6,299</p>
+
+<button onclick="addToCart('Maroon Maharaja Sherwani',6299,'images/pic-3.jpg'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+<div class="card" onclick="viewProduct('Designer Groom Suit',6999,'images/pic-4.jpg')">
+
+<img src="images/pic-4.jpg">
+
+<h3>Designer Groom Suit</h3>
+
+<p class="price">₹6,999</p>
+
+<button onclick="addToCart('Designer Groom Suit',6999,'images/pic-4.jpg'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 5 -->
+<div class="card" onclick="viewProduct('Classic Black Tuxedo',7499,'images/pic-5.webp')">
+
+<img src="images/pic-5.webp">
+
+<h3>Classic Black Tuxedo</h3>
+
+<p class="price">₹7,499</p>
+
+<button onclick="addToCart('Classic Black Tuxedo',7499,'images/pic-5.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 6 -->
+<div class="card" onclick="viewProduct('Royal Blue Wedding Suit',6799,'images/pic-6.webp')">
+
+<img src="images/pic-6.webp">
+
+<h3>Royal Blue Wedding Suit</h3>
+
+<p class="price">₹6,799</p>
+
+<button onclick="addToCart('Royal Blue Wedding Suit',6799,'images/pic-6.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 7 -->
+<div class="card" onclick="viewProduct('Silk Kurta Wedding Set',2499,'images/pic-7.webp')">
+
+<img src="images/pic-7.webp">
+
+<h3>Silk Kurta Wedding Set</h3>
+
+<p class="price">₹2,499</p>
+
+<button onclick="addToCart('Silk Kurta Wedding Set',2499,'images/pic-7.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 8 -->
+<div class="card" onclick="viewProduct('Embroidered Kurta Set',2999,'images/pic-8.webp')">
+
+<img src="images/pic-8.webp">
+
+<h3>Embroidered Kurta Set</h3>
+
+<p class="price">₹2,999</p>
+
+<button onclick="addToCart('Embroidered Kurta Set',2999,'images/pic-8.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 9 -->
+<div class="card" onclick="viewProduct('Designer Wedding Kurta',3199,'images/pic-9.webp')">
+
+<img src="images/pic-9.webp">
+
+<h3>Designer Wedding Kurta</h3>
+
+<p class="price">₹3,199</p>
+
+<button onclick="addToCart('Designer Wedding Kurta',3199,'images/pic-9.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 10 -->
+<div class="card" onclick="viewProduct('Indo-Western Groom Outfit',5499,'images/pic-10.webp')">
+
+<img src="images/pic-10.webp">
+
+<h3>Indo-Western Groom Outfit</h3>
+
+<p class="price">₹5,499</p>
+
+<button onclick="addToCart('Indo-Western Groom Outfit',5499,'images/pic-10.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 11 -->
+<div class="card" onclick="viewProduct('Modern Indo Wedding Suit',5999,'images/pic-11.webp')">
+
+<img src="images/pic-11.webp">
+
+<h3>Modern Indo Wedding Suit</h3>
+
+<p class="price">₹5,999</p>
+
+<button onclick="addToCart('Modern Indo Wedding Suit',5999,'images/pic-11.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
+</div>
+
+
+<!-- PRODUCT 12 -->
+<div class="card" onclick="viewProduct('Luxury Groom Indo Set',6499,'images/pic-12.webp')">
+
+<img src="images/pic-12.webp">
+
+<h3>Luxury Groom Indo Set</h3>
+
+<p class="price">₹6,499</p>
+
+<button onclick="addToCart('Luxury Groom Indo Set',6499,'images/pic-12.webp'); event.stopPropagation();">
+Add To Cart
+</button>
+
 </div>
 
 </div>
+
 </div>
 
-<footer>
-<p>© 2026 RoyalGroom Wedding Store</p>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h3>RoyalGroom</h3>
+<p>Premium men's wedding outfits designed for elegance and comfort on your special day.</p>
+</div>
+
+<div class="footer-col">
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="products.html">Collection</a>
+<a href="cart.html">Cart</a>
+<a href="checkout.html">Checkout</a>
+</div>
+
+<div class="footer-col">
+<h3>Customer Support</h3>
+<a href="#">Shipping Policy</a>
+<a href="#">Returns</a>
+<a href="#">Size Guide</a>
+<a href="#">Contact Us</a>
+</div>
+
+<div class="footer-col">
+<h3>Follow Us</h3>
+<p>📷 Instagram</p>
+<p>📘 Facebook</p>
+<p>🐦 Twitter</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 RoyalGroom Wedding Store | All Rights Reserved</p>
+</div>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
+
 </html>
